@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Discord Chat Exporter",
+    "version": "1.0",
+    "description": "Discord integration that allows effortless download of complete chat histories from private and group chats.",
+    "icons": { "128": "icon128.png" },
+    "permissions": ["scripting", "tabs"],
+    "host_permissions": ["https://discord.com/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://discord.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "128": "icon128.png"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["inject.js", "add-button.js"],
+            "matches": ["https://discord.com/*"]
+        }
+    ]
+}
