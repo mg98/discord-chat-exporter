@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Discord integration that allows effortless download of complete chat histories from private and group chats.",
     "icons": { "128": "icon128.png" },
-    "permissions": ["scripting", "tabs"],
+    "permissions": ["tabs"],
     "host_permissions": ["https://discord.com/*"],
     "background": {
         "service_worker": "background.js"
